@@ -6,17 +6,65 @@
     <meta charset="UTF-8">
     <title>jQueryTest title</title>
 
-    <script type="text/javascript">
-        $(document).ready(function(){
-            alert("Hello World!");
-        });
+    <style>
+        .clsTest{
+            color: red;
+        }
+        #idTest{
+            color: blue;
+        }
+        a{
+            color: green;
+        }
+        div.clsTest{
+            color: aqua;
+            font-size: 20px;
+        }
+        p.clsTest,a{
+            font-size: 22px;
+        }
+        #divId p{
+            font-size: 50px;
+        }
+        *{
+            font-size: 30px;
+        }
+    </style>
 
-        $(function(){
-            alert("Hello World again!");
-        });
-    </script>
 </head>
 <body>
+<p class="clsTest">clsTest:red</p>
+<p id="idTest">idTest:blue</p>
+<a>a:green</a>
+<div class="clsTest">div.clsTest:font-size:20px</div>
+<div id="divId">
+    <p>divId-p</p>
+    <a>divId-a</a>
+</div>
+<!--<p onclick="clickMe();">clickMe</p>-->
+<p id="toClickId">clickMe</p>
 
+<script type="text/javascript">
+
+
+    //        $(document).ready(function(){
+    //            alert("Hello World!");
+    //        });
+    //
+    //        $(function(){
+    //            alert("Hello World again!");
+    //        });
+
+
+//    function clickMe(){
+//        alert("you clicked me?")
+//    }
+
+    $("#toClickId").click(function(){
+        alert("you clicked clickMe!")
+    });
+
+
+</script>
 </body>
 </html>
