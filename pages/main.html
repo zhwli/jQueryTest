@@ -7,42 +7,59 @@
     <title>jQueryTest title</title>
 
     <style>
-        .clsTest{
-            color: red;
-        }
-        #idTest{
-            color: blue;
-        }
-        a{
-            color: green;
-        }
-        div.clsTest{
-            color: aqua;
-            font-size: 20px;
-        }
-        p.clsTest,a{
-            font-size: 22px;
-        }
-        #divId p{
-            font-size: 50px;
-        }
-        *{
-            font-size: 30px;
-        }
+        /*.clsTest{*/
+            /*color: red;*/
+        /*}*/
+        /*#idTest{*/
+            /*color: blue;*/
+        /*}*/
+        /*a{*/
+            /*color: green;*/
+        /*}*/
+        /*div.clsTest{*/
+            /*color: aqua;*/
+            /*font-size: 20px;*/
+        /*}*/
+        /*p.clsTest,a{*/
+            /*font-size: 22px;*/
+        /*}*/
+        /*#divId p{*/
+            /*font-size: 50px;*/
+        /*}*/
+        /**{*/
+            /*font-size: 30px;*/
+        /*}*/
     </style>
 
 </head>
 <body>
-<p class="clsTest">clsTest:red</p>
-<p id="idTest">idTest:blue</p>
-<a>a:green</a>
-<div class="clsTest">div.clsTest:font-size:20px</div>
-<div id="divId">
-    <p>divId-p</p>
-    <a>divId-a</a>
-</div>
+<!--<p class="clsTest">clsTest:red</p>-->
+<!--<p id="idTest">idTest:blue</p>-->
+<!--<a>a:green</a>-->
+<!--<div class="clsTest">div.clsTest:font-size:20px</div>-->
+<!--<div id="divId">-->
+    <!--<p>divId-p</p>-->
+    <!--<a>divId-a</a>-->
+<!--</div>-->
 <!--<p onclick="clickMe();">clickMe</p>-->
-<p id="toClickId">clickMe</p>
+<!--<p id="toClickId">clickMe</p>-->
+<table>
+<tbody>
+<tr><td>line one</td><td>line one</td></tr>
+<tr><td>line two</td><td>line two</td></tr>
+<tr><td>line three</td><td>line three</td></tr>
+<tr><td>line four</td><td>line four</td></tr>
+<tr><td>line five</td><td>line five</td></tr>
+</tbody>
+</table>
+<br>
+<input type="checkbox" value="1" name="check" checked="checked"/>
+<input type="checkbox" value="2" name="check" />
+<input type="checkbox" value="3" name="check" checked="checked"/>
+<input type="button" value="你选的个数" id="btn"/>
+
+
+
 
 <script type="text/javascript">
 
@@ -60,9 +77,13 @@
 //        alert("you clicked me?")
 //    }
 
-    $("#toClickId").click(function(){
-        alert("you clicked clickMe!")
-    });
+//    $("#toClickId").click(function(){
+//        alert("you clicked clickMe!")
+//    });
+
+//    $("div").click(function(){
+//        alert("click div");
+//    });
 
 
 </script>
