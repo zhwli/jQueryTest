@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <title></title>
     <script src="../../3rd/jquery-3.0.0.js" type="application/javascript"></script>
+    <style>
+        .greenColor {
+            color: green;
+        }
+    </style>
 </head>
 <body>
 <div class="SubCategoryBox">
@@ -31,16 +36,54 @@
     var $category = $("ul li:gt(5):not(:last)");
     $category.hide();
 
-    // TODO 42行 return false 应该不跳转，但实际跳转了
+    // DONE 42行 return false 应该不跳转，但实际跳转了---前面出错,导致无法到return false,已修复
     // class为showmore的div的所有子元素a
     var $toggleBtn = $("div.showmore > a");
-    $toggleBtn.click(function(){
-//        var $allBand = $("ul li");
-//        $allBand.show();
-        $category.show();
-        $(".showmore").innerHTML("精简显示");
-        return false;
-    });
+
+    // 状态处理
+        $toggleBtn.click(function () {
+            if ($category.is(":visible")) {
+                $category.hide();
+                $(".showmore span").text("显示全部");
+                $("ul li").filter(":contains('a'),:contains('c'),:contains('e')").removeClass("greenColor");
+            } else {
+                $category.show();
+                $(this).find('span').text("精简显示");
+                $("ul li").filter(":contains('a'),:contains('c'),:contains('e')").addClass("greenColor");
+            }
+            return false;
+        });
+
+    // 交替处理 TODO 无法显示按钮文字--使用toggle方法就无法显示按钮文字
+    //    $toggleBtn.toggle(
+    //            function () {
+    //                $category.hide();
+    //                $(".showmore span").text("显示全部");
+    //                $("ul li").filter(":contains('a'),:contains('c'),:contains('e')").removeClass("greenColor");
+    //                return false;
+    //            },
+    //            function () {
+    //                $category.show();
+    //                $(this).find('span').text("精简显示");
+    //                $("ul li").filter(":contains('a'),:contains('c'),:contains('e')").addClass("greenColor");
+    //                return false;
+    //            })
+
+    // toggle test : Failed
+//    $toggleBtn.toggle(
+//            function () {
+//                $("div").css("background-color", "green");
+//                return false;
+//            },
+//            function () {
+//                $("div").css("background-color", "red");
+//                return false;
+//            },
+//            function () {
+//                $("div").css("background-color", "yellow");
+//                return false;
+//            }
+//    );
 
 
 </script>
