@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="http://apps.bdimg.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body ng-app="testApp" ng-controller="testCtrl">
+点击这里禁用所有表单输入域:<input type="checkbox" ng-change="changeFunc()" ng-model="all"><br>
+<br>
+
+<input type="text" ng-disabled="all">
+<input type="radio" ng-disabled="all">
+<select ng-disabled="all">
+    <option>Female</option>
+    <option>Male</option>
+</select>
+<input ng-model="testStrModel" ng-disabled="all">
+<p>{{all}}</p>
+
+<script type="text/javascript">
+    var _scope;
+
+    var app=angular.module('testApp',[]);
+    app.controller('testCtrl',function ($scope) {
+        _scope = $scope;
+//        $scope.testStrModel = "test";
+        $scope.changeFunc = function () {
+            alert($scope.all);
+//            alert("test");
+        }
+    })
+
+</script>
+
+
+</body>
+</html>
