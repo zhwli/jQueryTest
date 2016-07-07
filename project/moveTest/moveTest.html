@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>move Test</title>
+    <script src="../../3rd/jquery-3.0.0.js" type="text/javascript"></script>
+    <style type="text/css">
+        .v_show{
+            /*position: relative;*/
+            /*top:28px;*/
+        }
+        .v_caption{
+            /*float: right;*/
+        }
+        .v_content{
+
+        }
+        .v_content_list ul li{
+            /*position: relative;*/
+            /*top:28px;*/
+            float:left;
+            width: 300px;
+            height: 344px;
+            padding:10px 25px;
+            border:4px solid #ebcbbe;
+            list-style-type:none;
+        }
+        .cartoon{
+            /*float: left;*/
+            font-size: 40px;
+            font-family: "\5FAE\8F6F\96C5\9ED1",Simhei;
+        }
+        .highlight_tip{
+            /*position: relative;*/
+            left: 30px;
+            /*float: left;*/
+        }
+        .change_btn{
+            /*float: left;*/
+        }
+        .more{
+            float: right;
+        }
+        .current{
+            font-size: large;
+            color: darkviolet;
+        }
+        .floatLeft{
+            float: left;
+        }
+    </style>
+</head>
+<body>
+<div class="v_show">
+    <div class="v_caption">
+        <!-- 头部标题,按钮等-->
+        <span class="cartoon floatLeft" title="电影">电影</span>
+        <br><br><br>
+        <div class="highlight_tip floatLeft">
+            <span class="current">1</span>
+            <span>2</span>
+            <span>3</span>
+            <span>4</span>
+        </div>
+        <span class="floatLeft">&nbsp&nbsp&nbsp</span>
+        <div class="change_btn floatLeft">
+            <span class="prev">上一页</span>
+            <span class="next">下一页</span>
+        </div>
+        <em class="more"><a href="#">更多</a> </em>
+    </div>
+    <br>
+    <div class="v_content">
+        <!-- 视频内容展示区-->
+        <div class="v_content_list">
+            <ul>
+                <li>
+                    <a href="#"><img src="./photo/大鱼海棠.jpeg" alt="大鱼海棠" /> </a>
+                    <h4><a href="#">大鱼海棠</a> </h4>
+                    <span>播放:<em>12,345</em></span>
+                </li>
+                <li>
+                    <a href="#"><img src="./photo/惊天魔盗团.jpeg" alt="惊天魔盗团" /> </a>
+                    <h4><a href="#">惊天魔盗团</a> </h4>
+                    <span>播放:<em>12,345</em></span>
+                </li>
+                <li>
+                    <a href="#"><img src="./photo/独立日.jpeg" alt="独立日" /> </a>
+                    <h4><a href="#">独立日</a> </h4>
+                    <span>播放:<em>12,345</em></span>
+                </li>
+                <li>
+                    <a href="#"><img src="./photo/愤怒的小鸟.jpeg" alt="愤怒的小鸟" /> </a>
+                    <h4><a href="#">愤怒的小鸟</a> </h4>
+                    <span>播放:<em>12,345</em></span>
+                </li>
+                <li>
+                    <a href="#"><img src="./photo/1.jpeg" alt="1" /> </a>
+                    <h4><a href="#">1</a> </h4>
+                    <span>播放:<em>12,345</em></span>
+                </li>
+                <li>
+                    <a href="#"><img src="./photo/2.jpeg" alt="2" /> </a>
+                    <h4><a href="#">2</a> </h4>
+                    <span>播放:<em>12,345</em></span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
