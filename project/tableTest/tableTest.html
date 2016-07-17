@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <title>Table Test</title>
-    <script src="/3rd/jquery-3.0.0.js" type="text/javascript"></script>
+    <script src="../../3rd/jquery-3.0.0.js" type="text/javascript"></script>
     <style type="text/css">
-        input:focus , textarea:focus{
+        input:focus, textarea:focus {
             border: 1px solid #f00;
             background: #fcc;
+        }
+
+        .msg span{
+            background: dodgerblue;
         }
     </style>
 </head>
 
 <body>
+<!--表格-->
 <form action="#" method="post" id="regForm">
     <fieldset>
         <legend>个人基本信息</legend>
@@ -24,12 +29,70 @@
             <label for="pass">密码</label>
             <input id="pass" type="password">
         </div>
-        <div>
-            <label for="msg">信息</label>
-            <textarea id="msg"></textarea>
+        <div class="msg">
+            <div class="msg_caption">
+                <!--用button操作会失效?-->
+                <span class="bigger">放大</span>
+                <span class="smaller">缩小</span>
+                <span class="top">回到顶部</span>
+                <span class="up">向上</span>
+                <span class="down">向下</span>
+            </div>
+            <div>
+                <!--<label for="comment">信息</label>-->
+                <textarea id="comment" rows="8" cols="60">
+                    testtesttesttesttesttesttesttesttesttesttesttesttesttest1
+                    testtesttesttesttesttesttesttesttesttesttesttesttesttest2
+                    testtesttesttesttesttesttesttesttesttesttesttesttesttest3
+                    testtesttesttesttesttesttesttesttesttesttesttesttesttest4
+                    testtesttesttesttesttesttesttesttesttesttesttesttesttest5
+                    testtesttesttesttesttesttesttesttesttesttesttesttesttest6
+                    testtesttesttesttesttesttesttesttesttesttesttesttesttest7
+                    testtesttesttesttesttesttesttesttesttesttesttesttesttest8
+                    testtesttesttesttesttesttesttesttesttesttesttesttesttest9
+                    testtesttesttesttesttesttesttesttesttesttesttesttesttest10
+                    testtesttesttesttesttesttesttesttesttesttesttesttesttest11</textarea>
+            </div>
         </div>
     </fieldset>
-
 </form>
+
+<script type="text/javascript">
+    $(function () {
+        var $comment = $("#comment");
+//        放大缩小
+        $(".bigger").click(function () {
+            if (!$comment.is(":animated") && $comment.height() < 500) {
+                // 在原有基础上将高度增加50,动画
+                $comment.animate({height: "+=50"});
+            }
+        });
+        $(".smaller").click(function () {
+            if (!$comment.is(":animated") && $comment.height() > 50) {
+                // 在原有基础上将高度减少50,动画
+                $comment.animate({height: "-=50"});
+            }
+        });
+//        滚动条上下
+        $(".top").click(function () {
+            if (!$comment.is(":animated")) {
+                // 在原有基础上向上滚动50px,动画
+                $comment.animate({scrollTop: "0"});
+            }
+        });
+        $(".up").click(function () {
+            if (!$comment.is(":animated")) {
+                // 在原有基础上向上滚动50px,动画
+                $comment.animate({scrollTop: "-=50"});
+            }
+        });
+        $(".down").click(function () {
+            if (!$comment.is(":animated")) {
+                // 在原有基础上向上滚动50px,动画
+                $comment.animate({scrollTop: "+=50"});
+            }
+        });
+    })
+</script>
 </body>
 </html>
